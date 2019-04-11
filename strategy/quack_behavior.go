@@ -23,3 +23,9 @@ type Squeak struct{}
 func (sq *Squeak) Quack() {
 	fmt.Println("Squeak")
 }
+
+type FakeQuack struct{}
+
+func (fq *FakeQuack) Quack() {
+	fmt.Println("Qwak")
+}
