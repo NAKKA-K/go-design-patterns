@@ -6,10 +6,10 @@ import "fmt"
 type ForecastDisplay struct {
 	currentPressure float64
 	lastPressure    float64
-	weatherData     WeatherData
+	weatherData     *WeatherData
 }
 
-func NewForecastDisplay(weatherData WeatherData) *ForecastDisplay {
+func NewForecastDisplay(weatherData *WeatherData) *ForecastDisplay {
 	fd := &ForecastDisplay{}
 	fd.currentPressure = 29.92
 
@@ -26,7 +26,7 @@ func (fd *ForecastDisplay) Update(temperature, humidity, pressure float64) {
 }
 
 func (fd *ForecastDisplay) Display() {
-	fmt.Println("Forecast: ")
+	fmt.Print("Forecast: ")
 	if fd.currentPressure > fd.lastPressure {
 		fmt.Println("Improving weather on the way!")
 	} else if fd.currentPressure == fd.lastPressure {

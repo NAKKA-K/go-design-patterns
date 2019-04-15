@@ -8,10 +8,10 @@ type StatisticsDisplay struct {
 	minTemp     float64
 	tempSum     float64
 	numReadings int64
-	weatherData WeatherData
+	weatherData *WeatherData
 }
 
-func NewStatisticsDisplay(weatherData WeatherData) *StatisticsDisplay {
+func NewStatisticsDisplay(weatherData *WeatherData) *StatisticsDisplay {
 	sd := &StatisticsDisplay{}
 	sd.weatherData = weatherData
 
@@ -34,5 +34,5 @@ func (sd *StatisticsDisplay) Update(temperature, humidity, pressure float64) {
 }
 
 func (sd *StatisticsDisplay) Display() {
-	fmt.Printf("Avg/Max/Min temperature = %f/%f/%f", (sd.tempSum / float64(sd.numReadings)), sd.maxTemp, sd.minTemp)
+	fmt.Printf("Avg/Max/Min temperature = %f/%f/%f\n", (sd.tempSum / float64(sd.numReadings)), sd.maxTemp, sd.minTemp)
 }

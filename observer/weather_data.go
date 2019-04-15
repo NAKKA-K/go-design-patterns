@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // WeatherData implement Subject
 type WeatherData struct {
 	observers   []Observer
@@ -56,4 +58,8 @@ func (wd *WeatherData) GetHumidity() float64 {
 
 func (wd *WeatherData) GetPressure() float64 {
 	return wd.pressure
+}
+
+func (wd *WeatherData) PrintObservers() {
+	fmt.Println(wd.observers)
 }

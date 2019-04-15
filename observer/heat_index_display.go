@@ -5,10 +5,10 @@ import "fmt"
 // HeatIndexDisplay implement Observer & DisplayElement
 type HeatIndexDisplay struct {
 	heatIndex   float64
-	weatherData WeatherData
+	weatherData *WeatherData
 }
 
-func NewHeatIndexDisplay(weatherData WeatherData) *HeatIndexDisplay {
+func NewHeatIndexDisplay(weatherData *WeatherData) *HeatIndexDisplay {
 	hd := &HeatIndexDisplay{}
 	hd.weatherData = weatherData
 

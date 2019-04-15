@@ -24,5 +24,5 @@ func (cd *CurrentConditionsDisplay) Update(temperature, humidity, pressure float
 }
 
 func (cd *CurrentConditionsDisplay) Display() {
-	fmt.Printf("Current conditions: %f F degrees and %f 5 humidity", cd.temperature, cd.humidity)
+	fmt.Printf("Current conditions: %f F degrees and %f 5 humidity\n", cd.temperature, cd.humidity)
 }
