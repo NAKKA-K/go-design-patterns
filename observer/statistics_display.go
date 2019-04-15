@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// StatisticsDisplay implement Observer & DisplayElement
 type StatisticsDisplay struct {
 	maxTemp     float64
 	minTemp     float64

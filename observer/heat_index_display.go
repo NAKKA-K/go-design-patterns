@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// HeatIndexDisplay implement Observer & DisplayElement
 type HeatIndexDisplay struct {
 	heatIndex   float64
 	weatherData WeatherData
